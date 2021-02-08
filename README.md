@@ -117,4 +117,4 @@ git clone https://github.com/AndersonD-art/tasksmobx.git
 
 The [MIT License]() (MIT)
 
-Copyright :copyright: 2021 - Tasks Mobx
+Copyright :copyright: 2021 - Tasks GETx
