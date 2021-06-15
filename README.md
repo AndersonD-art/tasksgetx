@@ -1,4 +1,4 @@
-<h1>Lista de Tarefas com GETx e SQFlite</h1> 
+<h1>Lista de Tarefas com GETx e SQFlite - Null Safety</h1> 
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=dart&message=language&color=blue&style=for-the-badge&logo=DART"/>  
@@ -34,7 +34,7 @@
 ## 💻 Descrição do projeto 
 
 <p align="justify">
-  Projeto realizado em Flutter, referente a um gerenciador de tarefas utilizando o banco de dados local SQFlite e a gerencia de estados GETx. 
+  Projeto realizado em Flutter, referente a um gerenciador de tarefas utilizando o banco de dados local SQFlite e a gerencia de estados GETx - Null Safety. 
 </p>
 
 ---
