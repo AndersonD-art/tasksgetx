@@ -5,9 +5,9 @@ import 'package:tarefas/app/data/repository/home_repository.dart';
 class HomeController extends GetxController {
   final HomeRepository _homeRepository = Get.find<HomeRepository>();
 
-  List<HomeModel> listModel = <HomeModel>[].obs;
+  List<HomeModel>? listModel = <HomeModel>[].obs;
 
-  List tasks = [].obs;
+  List? tasks = [].obs;
 
   final _newTasksTitle = "".obs;
   get newTasksTitle => this._newTasksTitle.value;
@@ -17,7 +17,7 @@ class HomeController extends GetxController {
 
   bool get isFormValid => newTasksTitle.isNotEmpty;
 
-  bool get isListValid => listModel.isNotEmpty;
+  bool get isListValid => listModel!.isNotEmpty;
 
   loadTask() async {
     final resp = await _homeRepository.getTasks();
@@ -34,7 +34,7 @@ class HomeController extends GetxController {
           date: DateTime.now().toString(),
         ),
       );
-      tasks.add(data);
+      tasks!.add(data);
     } else if (recover != null && edit == null) {
       var data = await _homeRepository.create(
         HomeModel(
@@ -42,7 +42,7 @@ class HomeController extends GetxController {
           date: recover.date,
         ),
       );
-      tasks.add(data);
+      tasks!.add(data);
     } else {
       tasks = await _homeRepository.update(
         HomeModel(

@@ -100,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                               return homeController.isListValid
                                   ? ListView.separated(
                                       itemCount:
-                                          homeController.listModel.length,
+                                          homeController.listModel!.length,
                                       itemBuilder: (context, index) {
                                         return Dismissible(
                                           background: Container(
@@ -125,7 +125,7 @@ class HomeScreen extends StatelessWidget {
                                               builder: (ctx) => AlertDialog(
                                                 title: Text('Tem Certeza?'),
                                                 content: Text(
-                                                  'Deseja excluir a tarefa ${homeController.listModel[index].name}?',
+                                                  'Deseja excluir a tarefa ${homeController.listModel![index].name}?',
                                                 ),
                                                 actions: <Widget>[
                                                   TextButton(
@@ -148,10 +148,10 @@ class HomeScreen extends StatelessWidget {
                                           },
                                           onDismissed: (_) {
                                             _ultimaTarefaRemovida =
-                                                homeController.listModel;
+                                                homeController.listModel!;
                                             homeController.dellTask(
                                                 homeController
-                                                    .listModel[index].id!);
+                                                    .listModel![index].id!);
                                             homeController.loadTask();
 
                                             ScaffoldMessenger.of(context)
@@ -160,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                                                 content: RichText(
                                                   text: TextSpan(
                                                     text:
-                                                        "Tarefa ${homeController.listModel[index].name} excluida",
+                                                        "Tarefa ${homeController.listModel![index].name} excluida",
                                                   ),
                                                 ),
                                                 duration: Duration(seconds: 2),
@@ -186,13 +186,13 @@ class HomeScreen extends StatelessWidget {
                                           child: ListTile(
                                             title: Text(
                                               homeController
-                                                  .listModel[index].name,
+                                                  .listModel![index].name,
                                               style: TextStyle(
                                                 color: Colors.blue,
                                               ),
                                             ),
                                             subtitle: Text(
-                                              "${_formatDate(homeController.listModel[index].date)}",
+                                              "${_formatDate(homeController.listModel![index].date)}",
                                             ),
                                             trailing: Row(
                                               mainAxisSize: MainAxisSize.min,
@@ -206,7 +206,7 @@ class HomeScreen extends StatelessWidget {
                                                           builder: (ctx) =>
                                                               CustomShowDialog(
                                                             task: homeController
-                                                                    .listModel[
+                                                                    .listModel![
                                                                 index],
                                                           ),
                                                         );
