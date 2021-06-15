@@ -25,7 +25,7 @@ class HomeController extends GetxController {
     update();
   }
 
-  addTask({HomeModel recover, HomeModel edit}) async {
+  addTask({HomeModel? recover, HomeModel? edit}) async {
     tasks = [].obs;
     if (recover == null && edit == null) {
       var data = await _homeRepository.create(
@@ -46,7 +46,7 @@ class HomeController extends GetxController {
     } else {
       tasks = await _homeRepository.update(
         HomeModel(
-          id: edit.id,
+          id: edit!.id,
           name: edit.name,
           date: edit.date,
         ),
@@ -54,7 +54,7 @@ class HomeController extends GetxController {
     }
   }
 
-  updateTask({HomeModel edit}) async {
+  updateTask({required HomeModel edit}) async {
     listModel = await _homeRepository.update(edit);
   }
 

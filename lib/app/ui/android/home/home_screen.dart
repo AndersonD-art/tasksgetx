@@ -151,7 +151,7 @@ class HomeScreen extends StatelessWidget {
                                                 homeController.listModel;
                                             homeController.dellTask(
                                                 homeController
-                                                    .listModel[index].id);
+                                                    .listModel[index].id!);
                                             homeController.loadTask();
 
                                             ScaffoldMessenger.of(context)

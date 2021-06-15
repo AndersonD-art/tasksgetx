@@ -7,11 +7,11 @@ String homeModelToJson(HomeModel data) => json.encode(data.toJson());
 class HomeModel {
   HomeModel({
     this.id,
-    this.name,
-    this.date,
+    required this.name,
+    required this.date,
   });
 
-  int id;
+  int? id;
   String name;
   String date;
 

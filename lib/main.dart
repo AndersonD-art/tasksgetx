@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:tarefas/app/routes/app_page_routes.dart';
 import 'package:tarefas/app/routes/app_routes.dart';
-import 'package:tarefas/app/ui/android/splash/splash_screen.dart';
 
-void main() => runApp(SplashScreenPage());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.orange[900],
       ),
       getPages: Pages.routes,
-      initialRoute: AppRoutes.LOGIN,
+      initialRoute: AppRoutes.INITIAL,
     );
   }
 }

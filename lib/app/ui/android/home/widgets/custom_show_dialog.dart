@@ -8,7 +8,7 @@ class CustomShowDialog extends StatelessWidget {
 
   final HomeModel task;
 
-  CustomShowDialog({Key key, this.task}) : super(key: key);
+  CustomShowDialog({Key? key, required this.task}) : super(key: key);
 
   final HomeController _homeController = Get.put(HomeController());
 
