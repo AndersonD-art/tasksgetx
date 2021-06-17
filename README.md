@@ -34,7 +34,9 @@
 ## 💻 Descrição do projeto 
 
 <p align="justify">
-  Projeto realizado em Flutter, referente a um gerenciador de tarefas utilizando o banco de dados local SQFlite e a gerencia de estados GETx - Null Safety. 
+  Projeto realizado em Flutter, referente a um gerenciador de tarefas utilizando o banco de dados local SQFlite e a gerencia de estados GETx - Null Safety.
+
+  Atenção para realizar o login podesse utilizar qualquer e-mail desde que seja válido e qualquer senha que tenha mais de 3 caracteres. 
 </p>
 
 ---
